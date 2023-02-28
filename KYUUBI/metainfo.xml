@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<metainfo>
+    <schemaVersion>2.0</schemaVersion>
+    <services>
+        <service>
+            <name>KYUUBI</name>
+            <displayName>Kyuubi</displayName>
+            <comment>Kyuubi是一个基于Spark构建的，针对大规模数据处理分析支持统一多租户的JDBC接口服务。</comment>
+            <version>1.6.0-incubating</version>
+            <components>
+                <component>
+                    <name>KYUUBI_SERVER</name>
+                    <displayName>Kyuubi Server</displayName>
+                    <category>MASTER</category>
+                    <cardinality>1+</cardinality>
+                    <versionAdvertised>true</versionAdvertised>
+                    <commandScript>
+                        <script>scripts/kyuubi_server.py</script>
+                        <scriptType>PYTHON</scriptType>
+                        <timeout>1200</timeout>
+                    </commandScript>
+                    <logs>
+                        <log>
+                            <logId>kyuubi</logId>
+                            <primary>true</primary>
+                        </log>
+                    </logs>
+                </component>
+            </components>
+
+            <supportOSandArch>CentOS7-x86_64,CentOS7-aarch64,Kylin10-aarch64,Kylinx10-x86_64,KUX5-x86_64</supportOSandArch>
+            <osSpecifics>
+                <osSpecific>
+                    <osFamily>any</osFamily>
+                    <packages>
+                        <package>
+                            <name>apache-kyuubi-1.6.0-incubating-bin</name>  <!-- Not using. Please make sure the os already contains all the dependencies. -->
+                        </package>
+                    </packages>
+                </osSpecific>
+            </osSpecifics>
+
+            <commandScript>
+                <script>scripts/service_check.py</script>
+                <scriptType>PYTHON</scriptType>
+                <timeout>300</timeout>
+            </commandScript>
+
+            <requiredServices>
+                <service>HDFS</service>
+                <service>YARN</service>
+                <service>SPARK3</service>
+            </requiredServices>
+
+            <configuration-dependencies>
+                <config-type>kyuubi-defaults</config-type>
+                <config-type>kyuubi-env</config-type>
+                <config-type>kyuubi-log4j2</config-type>
+            </configuration-dependencies>
+
+            <restartRequiredAfterChange>true</restartRequiredAfterChange>
+
+            <!--<quickLinksConfigurations>
+                <quickLinksConfiguration>
+                    <fileName>quicklinks.json</fileName>
+                    <default>true</default>
+                </quickLinksConfiguration>
+            </quickLinksConfigurations>-->
+
+        </service>
+    </services>
+</metainfo>

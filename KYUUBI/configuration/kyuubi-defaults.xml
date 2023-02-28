@@ -1,0 +1,142 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<!--
+   Licensed to the Apache Software Foundation (ASF) under one or more
+   contributor license agreements.  See the NOTICE file distributed with
+   this work for additional information regarding copyright ownership.
+   The ASF licenses this file to You under the Apache License, Version 2.0
+   (the "License"); you may not use this file except in compliance with
+   the License.  You may obtain a copy of the License at
+       http://www.apache.org/licenses/LICENSE-2.0
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+-->
+<configuration supports_adding_forbidden="true">
+    <property>
+        <name>kyuubi_download_url</name>
+        <value>DOWNLOAD_PROM_REPO</value>
+        <display-name>Kyuubi Download URL</display-name>
+        <description>Kyuubi Download URL. Kyuubi will be downloaded from repository URL if this config is left unchanged.</description>
+    </property>
+
+<!--  Kyuubi user  -->
+    <property>
+        <name>kyuubi_group</name>
+        <value>kyuubi</value>
+        <display-name>Kyuubi Group</display-name>
+        <description>Kyuubi group</description>
+    </property>
+
+    <property>
+        <name>kyuubi_user</name>
+        <value>kyuubi</value>
+        <display-name>Kyuubi User</display-name>
+        <description>Kyuubi user</description>
+    </property>
+<!--  Kyuubi IP port  -->
+    <property>
+        <name>kyuubi_frontend_bind_host</name>
+        <value>0.0.0.0</value>
+        <display-name>kyuubi.frontend.bind.host</display-name>
+        <description>Kyuubi bind host</description>
+    </property>
+    <property>
+        <name>kyuubi_frontend_bind_port</name>
+        <value>10009</value>
+        <display-name>kyuubi.frontend.bind.port</display-name>
+        <description>Kyuubi bind port</description>
+    </property>
+<!--  Kyuubi HA  -->
+    <property>
+        <name>kyuubi_ha_client_class</name>
+        <value>org.apache.kyuubi.ha.client.zookeeper.ZookeeperDiscoveryClient</value>
+        <display-name>kyuubi.ha.client.class</display-name>
+        <description>Kyuubi HA client class</description>
+    </property>
+    <property>
+        <name>kyuubi_ha_addresses</name>
+        <value>USE_CLUSTER_ZOOKEEPER</value>
+        <display-name>kyuubi.ha.addresses</display-name>
+        <description>Kyuubi HA addresses</description>
+    </property>
+    <property>
+        <name>kyuubi_ha_namespace</name>
+        <value>kyuubi</value>
+        <display-name>kyuubi.ha.namespace</display-name>
+        <description>Kyuubi HA namespace</description>
+    </property>
+
+    <property>
+        <name>kyuubi_ha_zookeeper_auth_type</name>
+        <value>NONE</value>
+        <display-name>kyuubi.ha.zookeeper.auth.type</display-name>
+        <description>Kyuubi HA Zookeeper auth type. Supports NONE/KERBEROS</description>
+    </property>
+    <property>
+        <name>kyuubi_ha_zookeeper_auth_principal</name>
+        <value></value>
+        <display-name>kyuubi.ha.zookeeper.auth.principal</display-name>
+        <description>Kyuubi HA zookeeper auth principal</description>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+        </value-attributes>
+    </property>
+    <property>
+        <name>kyuubi_ha_zookeeper_auth_keytab</name>
+        <value></value>
+        <display-name>kyuubi.ha.zookeeper.auth.keytab</display-name>
+        <description>Kyuubi HA Zookeeper auth keytab</description>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+        </value-attributes>
+    </property>
+<!--  Kyuubi authentication  -->
+    <property>
+        <name>kyuubi_authentication</name>
+        <value>NONE</value>
+        <display-name>kyuubi.authentication</display-name>
+        <description>Kyuubi authentication. Supports NONE/KERBEROS</description>
+    </property>
+    <property>
+        <name>kyuubi_kinit_principal</name>
+        <value></value>
+        <display-name>kyuubi.kinit.principal</display-name>
+        <description>Kyuubi kerberos principal</description>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+        </value-attributes>
+    </property>
+    <property>
+        <name>kyuubi_kinit_keytab</name>
+        <value></value>
+        <display-name>kyuubi.kinit.keytab</display-name>
+        <description>Kyuubi kerberos keytab</description>
+        <value-attributes>
+            <empty-value-valid>true</empty-value-valid>
+        </value-attributes>
+    </property>
+<!--  Kyuubi engine share level  -->
+    <property>
+        <name>kyuubi_engine_share_level</name>
+        <value>USER</value>
+        <display-name>kyuubi.engine.share.level</display-name>
+        <description>Kyuubi engine share level</description>
+    </property>
+<!--  Kyuubi custom properties  -->
+    <property>
+        <name>kyuubi_custom_properties</name>
+        <value>
+# This is the place for your custom properties.
+# e.g.
+# your_key              your_value
+        </value>
+        <display-name>kyuubi.custom.properties</display-name>
+        <description>Kyuubi custom properties</description>
+        <value-attributes>
+            <type>content</type>
+        </value-attributes>
+    </property>
+</configuration>
