@@ -6,7 +6,7 @@
             <name>KYUUBI</name>
             <displayName>Kyuubi</displayName>
             <comment>Kyuubi是一个基于Spark构建的，针对大规模数据处理分析支持统一多租户的JDBC接口服务。</comment>
-            <version>1.6.0-incubating</version>
+            <version>1.7.0</version>
             <components>
                 <component>
                     <name>KYUUBI_SERVER</name>

@@ -57,27 +57,27 @@ class KyuubiServer(Script):
                   )
 
         Logger.info('Check existing files')
-        if os.path.exists(os.path.join(params.kyuubi_installation_path, 'kyuubi.tar.gz')):
+        if os.path.exists(os.path.join(params.kyuubi_installation_path, params.KYUUBI_TAR_NAME)):
             Logger.info('Kyuubi tarball exists. Delete it before downloading')
-            Execute("rm -f {0}".format(os.path.join(params.kyuubi_installation_path, 'kyuubi.tar.gz')))
+            Execute("rm -f {0}".format(os.path.join(params.kyuubi_installation_path, params.KYUUBI_TAR_NAME)))
 
         if os.path.exists(params.KYUUBI_HOME):
             Logger.info('Kyuubi binary has been extracted. Delete it before installation')
             Execute("rm -rf {0}".format(params.KYUUBI_HOME))
 
         Logger.info('Downloading Kyuubi binaries')
-        Execute("cd {0}; wget {1} -O kyuubi.tar.gz".format(params.kyuubi_installation_path, params.kyuubi_download_url),
+        Execute("cd {0}; wget {1} -O {2}".format(params.kyuubi_installation_path, params.kyuubi_download_url, params.KYUUBI_TAR_NAME),
                 user=params.kyuubi_user)
 
         Logger.info('Extracting Kyuubi binaries')
-        Execute("cd {0}; tar -zxvf kyuubi.tar.gz".format(params.kyuubi_installation_path), user=params.kyuubi_user)
-        File(os.path.join(params.kyuubi_installation_path, 'kyuubi.tar.gz'), action='delete')
+        Execute("cd {0}; tar -zxvf {1}".format(params.kyuubi_installation_path, params.KYUUBI_TAR_NAME), user=params.kyuubi_user)
+        File(os.path.join(params.kyuubi_installation_path, params.KYUUBI_TAR_NAME), action='delete')
 
         Logger.info('Modify log folder access permissions')
         Execute("chmod 777 {0}/logs".format(params.KYUUBI_HOME), user=params.kyuubi_user)
 
         Logger.info('Delete Kyuubi tarball')
-        Execute("rm -f {0}".format(os.path.join(params.kyuubi_installation_path, 'kyuubi.tar.gz')))
+        Execute("rm -f {0}".format(os.path.join(params.kyuubi_installation_path, params.KYUUBI_TAR_NAME)))
 
         self.configure(env)
         Logger.info('Kyuubi installation completed')
