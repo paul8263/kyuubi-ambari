@@ -10,7 +10,7 @@
         {
           "name": "kyuubi_user",
           "principal": {
-            "value": "${kyuubi-defaults/kyuubi_user}${principal_suffix}/${realm}@${realm}",
+            "value": "${kyuubi-defaults/kyuubi_user}/_HOST@${realm}",
             "type" : "user",
             "configuration": "kyuubi-defaults/kyuubi_kinit_principal",
             "local_username" : "${kyuubi-defaults/kyuubi_user}"
@@ -38,8 +38,8 @@
         {
           "kyuubi-defaults": {
             "kyuubi_authentication": "KERBEROS",
-            "kyuubi_kinit_principal": "${kyuubi-defaults/kyuubi_user}${principal_suffix}/${realm}@${realm}",
-            "kyuubi_kinit_keytab": "${keytab_dir}/kyuubi.server.kerberos.keytab"
+            "kyuubi_kinit_principal": "${kyuubi-defaults/kyuubi_user}/_HOST@${realm}",
+            "kyuubi_kinit_keytab": "${keytab_dir}/kyuubi.service.keytab"
           }
         },
         {
