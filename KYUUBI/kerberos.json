@@ -45,7 +45,8 @@
         {
           "core-site": {
             "hadoop.proxyuser.${kyuubi-defaults/kyuubi_user}.groups": "*",
-            "hadoop.proxyuser.${kyuubi-defaults/kyuubi_user}.hosts": "*"
+            "hadoop.proxyuser.${kyuubi-defaults/kyuubi_user}.hosts": "*",
+            "hadoop.proxyuser.${kyuubi-defaults/kyuubi_user}.users": "*"
           }
         }
       ]
