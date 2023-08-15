@@ -71,13 +71,13 @@
 
     <property>
         <name>kyuubi_ha_zookeeper_auth_type</name>
-        <value>NONE</value>
+        <value>{{kyuubi_ha_zookeeper_auth_type}}</value>
         <display-name>kyuubi.ha.zookeeper.auth.type</display-name>
         <description>Kyuubi HA Zookeeper auth type. Supports NONE/KERBEROS</description>
     </property>
     <property>
         <name>kyuubi_ha_zookeeper_auth_principal</name>
-        <value></value>
+        <value>{{kyuubi_ha_zookeeper_auth_principal}}</value>
         <display-name>kyuubi.ha.zookeeper.auth.principal</display-name>
         <description>Kyuubi HA zookeeper auth principal</description>
         <value-attributes>
@@ -86,7 +86,7 @@
     </property>
     <property>
         <name>kyuubi_ha_zookeeper_auth_keytab</name>
-        <value></value>
+        <value>{{kyuubi_ha_zookeeper_auth_keytab}}</value>
         <display-name>kyuubi.ha.zookeeper.auth.keytab</display-name>
         <description>Kyuubi HA Zookeeper auth keytab</description>
         <value-attributes>

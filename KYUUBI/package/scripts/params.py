@@ -35,6 +35,8 @@ config = Script.get_config()
 
 stack_root = Script.get_stack_root()
 
+security_enabled = config['configurations']['cluster-env']['security_enabled']
+
 kyuubi_installation_path = os.path.join(stack_root, STACK_VERSION, 'kyuubi')
 KYUUBI_HOME = os.path.join(kyuubi_installation_path, KYUUBI_DIR_NAME)
 
@@ -69,6 +71,14 @@ kyuubi_ha_namespace = kyuubi_defaults['kyuubi_ha_namespace']
 kyuubi_ha_zookeeper_auth_type = kyuubi_defaults['kyuubi_ha_zookeeper_auth_type']
 kyuubi_ha_zookeeper_auth_principal = kyuubi_defaults['kyuubi_ha_zookeeper_auth_principal']
 kyuubi_ha_zookeeper_auth_keytab = kyuubi_defaults['kyuubi_ha_zookeeper_auth_keytab']
+
+if security_enabled:
+    http_host = config['agentLevelParams']['hostname']
+    kyuubi_ha_zookeeper_auth_type = 'KERBEROS'
+    kyuubi_ha_zookeeper_auth_principal = default('/configurations/zookeeper-env/zookeeper_principal_name', 'zk@example.com').replace('_HOST', http_host)
+    kyuubi_ha_zookeeper_auth_keytab = default('/configurations/zookeeper-env/zookeeper_keytab_path', '/etc/security/keytabs/zk.service.keytab')
+else:
+    kyuubi_ha_zookeeper_auth_type = 'NONE'
 
 # Kyuubi authentication
 
