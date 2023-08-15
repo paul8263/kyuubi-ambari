@@ -7,6 +7,7 @@
             <displayName>Kyuubi</displayName>
             <comment>Kyuubi是一个基于Spark构建的，针对大规模数据处理分析支持统一多租户的JDBC接口服务。</comment>
             <version>1.7.0</version>
+            <checkFile>kyuubi.tar</checkFile>
             <components>
                 <component>
                     <name>KYUUBI_SERVER</name>
@@ -28,13 +29,13 @@
                 </component>
             </components>
 
-            <supportOSandArch>CentOS7-x86_64,CentOS7-aarch64,Kylin10-aarch64,Kylinx10-x86_64,KUX5-x86_64</supportOSandArch>
+            <supportOSandArch>CentOS7-x86_64,CentOS7-aarch64,Kylin10-aarch64,Kylinx10-x86_64,KUX5-x86_64,KOS5-x86_64</supportOSandArch>
             <osSpecifics>
                 <osSpecific>
                     <osFamily>any</osFamily>
                     <packages>
                         <package>
-                            <name>apache-kyuubi-1.6.0-incubating-bin</name>  <!-- Not using. Please make sure the os already contains all the dependencies. -->
+                            <name>apache-kyuubi-1.7.0-bin</name>  <!-- Not using. Please make sure the os already contains all the dependencies. -->
                         </package>
                     </packages>
                 </osSpecific>
