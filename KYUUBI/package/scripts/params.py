@@ -24,8 +24,8 @@ import repoin
 
 # Package & env configuration
 
-KYUUBI_TAR_NAME = 'kyuubi.tar.gz'
-KYUUBI_DIR_NAME = 'apache-kyuubi-1.6.0-incubating-bin'
+KYUUBI_TAR_NAME = 'apache-kyuubi-1.7.0-bin.tgz'
+KYUUBI_DIR_NAME = 'apache-kyuubi-1.7.0-bin'
 STACK_VERSION = '3.0.1.0-187'
 
 # Whether Kyuubi locates in aux or HDP basic package
@@ -79,6 +79,14 @@ kyuubi_kinit_keytab = kyuubi_defaults['kyuubi_kinit_keytab']
 # Kyuubi engine share level
 
 kyuubi_engine_share_level = kyuubi_defaults['kyuubi_engine_share_level']
+
+# Kyuubi spark master
+
+spark_master = kyuubi_defaults['spark_master']
+
+# spark yarn queue
+
+spark_yarn_queue = kyuubi_defaults['spark_yarn_queue']
 
 # Custom properties
 

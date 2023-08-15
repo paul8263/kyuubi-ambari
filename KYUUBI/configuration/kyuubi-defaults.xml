@@ -125,6 +125,20 @@
         <display-name>kyuubi.engine.share.level</display-name>
         <description>Kyuubi engine share level</description>
     </property>
+<!--  Spark master  -->
+    <property>
+        <name>spark_master</name>
+        <value>yarn</value>
+        <display-name>spark.master</display-name>
+        <description>Spark master</description>
+    </property>
+<!--  Spark on Yarn queue  -->
+    <property>
+        <name>spark_yarn_queue</name>
+        <value>default</value>
+        <display-name>spark.yarn.queue</display-name>
+        <description>spark yarn queue</description>
+    </property>
 <!--  Kyuubi custom properties  -->
     <property>
         <name>kyuubi_custom_properties</name>
