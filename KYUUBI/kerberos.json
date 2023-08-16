@@ -39,7 +39,10 @@
           "kyuubi-defaults": {
             "kyuubi_authentication": "KERBEROS",
             "kyuubi_kinit_principal": "${kyuubi-defaults/kyuubi_user}/_HOST@${realm}",
-            "kyuubi_kinit_keytab": "${keytab_dir}/kyuubi.service.keytab"
+            "kyuubi_kinit_keytab": "${keytab_dir}/kyuubi.service.keytab",
+            "kyuubi_ha_zookeeper_auth_type": "KERBEROS",
+            "kyuubi_ha_zookeeper_auth_principal": "${kyuubi-defaults/kyuubi_user}/_HOST@${realm}",
+            "kyuubi_ha_zookeeper_auth_keytab": "${keytab_dir}/kyuubi.service.keytab"
           }
         },
         {
