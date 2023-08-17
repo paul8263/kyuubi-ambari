@@ -21,6 +21,7 @@ from kyuubi_utils import get_zookeeper_ensemble_str
 import commands
 import os
 import repoin
+import socket
 
 # Package & env configuration
 
@@ -55,6 +56,11 @@ kyuubi_group = kyuubi_defaults['kyuubi_group']
 
 kyuubi_frontend_bind_host = kyuubi_defaults['kyuubi_frontend_bind_host']
 kyuubi_frontend_bind_port = kyuubi_defaults['kyuubi_frontend_bind_port']
+
+hostname = socket.gethostname()
+ip = socket.gethostbyname(hostname)
+if kyuubi_frontend_bind_host == 'USE_HOST_IP':
+    kyuubi_frontend_bind_host = ip
 
 # Kyuubi High Availability
 

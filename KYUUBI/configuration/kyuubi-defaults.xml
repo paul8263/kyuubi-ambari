@@ -39,7 +39,7 @@
 <!--  Kyuubi IP port  -->
     <property>
         <name>kyuubi_frontend_bind_host</name>
-        <value>0.0.0.0</value>
+        <value>USE_HOST_IP</value>
         <display-name>kyuubi.frontend.bind.host</display-name>
         <description>Kyuubi bind host</description>
     </property>
