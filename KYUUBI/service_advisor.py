@@ -136,7 +136,7 @@ class KyuubiServiceAdvisor(service_advisor.ServiceAdvisor):
 
 class KyuubiRecommender(service_advisor.ServiceAdvisor):
     """
-    Zeppelin Recommender suggests properties when adding the service for the first time or modifying configs via the UI.
+    Kyuubi Recommender suggests properties when adding the service for the first time or modifying configs via the UI.
     """
 
     def __init__(self, *args, **kwargs):
