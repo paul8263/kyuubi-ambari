@@ -11,6 +11,8 @@ This project enables Ambari to setup Kyuubi cluster.
 
 # How to use
 
+You might change kyuubi_download_url, KYUUBI_TAR_NAME, KYUUBI_DIR_NAME and STACK_VERSION in `params.py` in order to keep them capable with your environment.
+
 Copy `KYUUBI` folder to `/var/lib/ambari-server/resources/stacks/HD/{stack_version}/services` folder in Ambari Server host and then restart Ambari Server.
 
 Then clean the cache of all Ambari Agent by running the following:
@@ -19,3 +21,7 @@ Then clean the cache of all Ambari Agent by running the following:
 rm -rf /var/lib/ambari-agent/cache/*
 ambari-agent restart
 ```
+
+# Author
+
+Paul Zhang
