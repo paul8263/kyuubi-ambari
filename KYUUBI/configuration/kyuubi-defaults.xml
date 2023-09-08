@@ -125,6 +125,14 @@
         <display-name>kyuubi.engine.share.level</display-name>
         <description>Kyuubi engine share level</description>
     </property>
+
+<!--  Engine type  -->
+    <property>
+        <name>kyuubi_engine_type</name>
+        <value>SPARK_SQL</value>
+        <display-name>kyuubi.engine.type</display-name>
+        <description>Specify the detailed engine supported by Kyuubi.</description>
+    </property>
 <!--  Spark master  -->
     <property>
         <name>spark_master</name>

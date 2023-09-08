@@ -86,6 +86,10 @@ kyuubi_kinit_keytab = kyuubi_defaults['kyuubi_kinit_keytab']
 
 kyuubi_engine_share_level = kyuubi_defaults['kyuubi_engine_share_level']
 
+# Kyuubi engine type
+
+kyuubi_engine_type = kyuubi_defaults['kyuubi_engine_type']
+
 # Kyuubi spark master
 
 spark_master = kyuubi_defaults['spark_master']
