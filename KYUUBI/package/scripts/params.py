@@ -14,7 +14,6 @@ See the License for the specific language governing permissions and
 limitations under the License.
 """
 
-# from resource_management.libraries.functions.version import format_hdp_stack_version, compare_versions
 from resource_management import *
 # from resource_management.core.logger import Logger
 from kyuubi_utils import get_zookeeper_ensemble_str
@@ -25,8 +24,8 @@ import socket
 
 # Package & env configuration
 
-KYUUBI_TAR_NAME = 'apache-kyuubi-1.7.0-bin.tgz'
-KYUUBI_DIR_NAME = 'apache-kyuubi-1.7.0-bin'
+KYUUBI_TAR_NAME = 'apache-kyuubi-1.9.0-bin.tgz'
+KYUUBI_DIR_NAME = 'apache-kyuubi-1.9.0-bin'
 STACK_VERSION = '3.0.1.0-187'
 
 # Whether Kyuubi locates in aux or HDP basic package
@@ -55,7 +54,9 @@ kyuubi_group = kyuubi_defaults['kyuubi_group']
 # kyuubi IP port
 
 kyuubi_frontend_bind_host = kyuubi_defaults['kyuubi_frontend_bind_host']
-kyuubi_frontend_bind_port = kyuubi_defaults['kyuubi_frontend_bind_port']
+kyuubi_frontend_protocols = kyuubi_defaults['kyuubi_frontend_protocols']
+kyuubi_frontend_thrift_binary_bind_port = kyuubi_defaults['kyuubi_frontend_thrift_binary_bind_port']
+kyuubi_frontend_rest_bind_port = kyuubi_defaults['kyuubi_frontend_rest_bind_port']
 
 hostname = socket.gethostname()
 ip = socket.gethostbyname(hostname)

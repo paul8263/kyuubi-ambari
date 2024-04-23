@@ -44,10 +44,22 @@
         <description>Kyuubi bind host</description>
     </property>
     <property>
-        <name>kyuubi_frontend_bind_port</name>
+        <name>kyuubi_frontend_protocols</name>
+        <value>THRIFT_BINARY,REST</value>
+        <display-name>kyuubi.frontend.protocols</display-name>
+        <description>Kyuubi frontend protocols</description>
+    </property>
+    <property>
+        <name>kyuubi_frontend_thrift_binary_bind_port</name>
         <value>10009</value>
-        <display-name>kyuubi.frontend.bind.port</display-name>
-        <description>Kyuubi bind port</description>
+        <display-name>kyuubi.frontend.thrift.binary.bind.port</display-name>
+        <description>Kyuubi frontend thrift binary bind port</description>
+    </property>
+    <property>
+        <name>kyuubi_frontend_rest_bind_port</name>
+        <value>10099</value>
+        <display-name>kyuubi.frontend.rest.bind.port</display-name>
+        <description>kyuubi frontend rest bind port</description>
     </property>
 <!--  Kyuubi HA  -->
     <property>
