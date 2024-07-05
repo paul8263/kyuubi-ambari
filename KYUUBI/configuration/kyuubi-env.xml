@@ -90,8 +90,8 @@
 
 export HADOOP_CONF_DIR=/usr/hdp/3.0.1.0-187/hadoop/conf
 export YARN_CONF_DIR=/usr/hdp/3.0.1.0-187/hadoop/conf
-export HIVE_HOME=/usr/hdp/3.0.1.0-187/hive
-export HIVE_CONF_DIR=/usr/hdp/3.0.1.0-187/hive/conf
+# export HIVE_HOME=/usr/hdp/3.0.1.0-187/hive
+# export HIVE_CONF_DIR=/usr/hdp/3.0.1.0-187/hive/conf
 export SPARK_HOME=/usr/hdp/3.0.1.0-187/spark3/spark-3.3.2
 ]]></value>
         <value-attributes>
