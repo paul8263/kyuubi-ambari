@@ -7,7 +7,7 @@ This project enables Ambari to setup Kyuubi cluster.
 * OS: CentOS/Redhat
 * Ambari: 2.7.5
 * HDP: 3.0.1.0.187
-* Kyuubi: 1.9.1
+* Kyuubi: 1.9.2
 
 # How to use
 

@@ -24,8 +24,8 @@ import socket
 
 # Package & env configuration
 
-KYUUBI_TAR_NAME = 'apache-kyuubi-1.9.1-bin.tgz'
-KYUUBI_DIR_NAME = 'apache-kyuubi-1.9.1-bin'
+KYUUBI_TAR_NAME = 'apache-kyuubi-1.9.2-bin.tgz'
+KYUUBI_DIR_NAME = 'apache-kyuubi-1.9.2-bin'
 STACK_VERSION = '3.0.1.0-187'
 
 # Whether Kyuubi locates in aux or HDP basic package
