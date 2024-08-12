@@ -5,7 +5,7 @@
         <service>
             <name>KYUUBI</name>
             <displayName>Kyuubi</displayName>
-            <comment>Kyuubi是一个基于Spark构建的，针对大规模数据处理分析支持统一多租户的JDBC接口服务。</comment>
+            <comment>Kyuubi是一个分布式和多租户SQL网关。用于在数仓和湖仓上提供Serverless SQL。</comment>
             <version>1.9.2</version>
             <checkFile>kyuubi.tar</checkFile>
             <components>
@@ -29,7 +29,7 @@
                 </component>
             </components>
 
-            <supportOSandArch>CentOS7-x86_64,CentOS7-aarch64,Kylin10-aarch64,Kylinx10-x86_64,KUX5-x86_64,KOS5-x86_64</supportOSandArch>
+            <supportOSandArch>CentOS7-x86_64,Kylin10-x86_64,Kylin10-aarch64,KOS5-x86_64,KOS5-aarch64,HOPEOS22-x86_64,HOPEOS22-aarch64,OPENEULER22-x86_64,OPENEULER22-aarch64,UOS20-x86_64,UOS20-aarch64</supportOSandArch>
             <osSpecifics>
                 <osSpecific>
                     <osFamily>any</osFamily>

@@ -90,9 +90,20 @@
 
 export HADOOP_CONF_DIR=/usr/hdp/3.0.1.0-187/hadoop/conf
 export YARN_CONF_DIR=/usr/hdp/3.0.1.0-187/hadoop/conf
+
+# Spark Configuration
+export SPARK_HOME=/usr/hdp/3.0.1.0-187/spark3/spark-3.3.2
+
+# Flink Configuration
+# export FLINK_HOME=/usr/hdp/3.0.1.0-187/flink/flink-1.17.2
+# export FLINK_HADOOP_CLASSPATH=`hadoop classpath`
+# export HADOOP_CLASSPATH=`hadoop classpath`
+
+# Hive Configuration
 # export HIVE_HOME=/usr/hdp/3.0.1.0-187/hive
 # export HIVE_CONF_DIR=/usr/hdp/3.0.1.0-187/hive/conf
-export SPARK_HOME=/usr/hdp/3.0.1.0-187/spark3/spark-3.3.2
+# export HIVE_HADOOP_CLASSPATH=`hadoop classpath`
+
 ]]></value>
         <value-attributes>
             <type>content</type>
