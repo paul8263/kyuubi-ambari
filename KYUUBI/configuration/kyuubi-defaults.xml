@@ -61,6 +61,12 @@
         <display-name>kyuubi.frontend.rest.bind.port</display-name>
         <description>kyuubi frontend rest bind port</description>
     </property>
+    <property>
+        <name>kyuubi_frontend_jetty_sendVersion_enabled</name>
+        <value>true</value>
+        <display-name>kyuubi.frontend.jetty.sendVersion.enabled</display-name>
+        <description>Whether to send version info in response</description>
+    </property>
 <!--  Kyuubi HA  -->
     <property>
         <name>kyuubi_ha_client_class</name>

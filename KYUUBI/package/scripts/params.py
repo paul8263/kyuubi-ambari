@@ -57,6 +57,7 @@ kyuubi_frontend_bind_host = kyuubi_defaults['kyuubi_frontend_bind_host']
 kyuubi_frontend_protocols = kyuubi_defaults['kyuubi_frontend_protocols']
 kyuubi_frontend_thrift_binary_bind_port = kyuubi_defaults['kyuubi_frontend_thrift_binary_bind_port']
 kyuubi_frontend_rest_bind_port = kyuubi_defaults['kyuubi_frontend_rest_bind_port']
+kyuubi_frontend_jetty_sendVersion_enabled = kyuubi_defaults['kyuubi_frontend_jetty_sendVersion_enabled']
 
 hostname = socket.gethostname()
 ip = socket.gethostbyname(hostname)
