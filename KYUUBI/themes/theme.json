@@ -15,18 +15,32 @@
               "sections": [
                 {
                   "name": "section-1",
-                  "display-name": "Thrift binary bind port",
+                  "display-name": "Port Settings",
                   "row-index": "0",
                   "column-index": "0",
                   "row-span": "1",
-                  "column-span": "1",
-                  "section-columns": "1",
+                  "column-span": "3",
+                  "section-columns": "3",
                   "section-rows": "1",
                   "subsections": [
                     {
-                      "name": "subsection-1",
+                      "name": "subsection-1-1",
                       "row-index": "0",
                       "column-index": "0",
+                      "row-span": "1",
+                      "column-span": "1"
+                    },
+                    {
+                      "name": "subsection-1-2",
+                      "row-index": "0",
+                      "column-index": "1",
+                      "row-span": "1",
+                      "column-span": "1"
+                    },
+                    {
+                      "name": "subsection-1-3",
+                      "row-index": "0",
+                      "column-index": "2",
                       "row-span": "1",
                       "column-span": "1"
                     }
@@ -34,18 +48,25 @@
                 },
                 {
                   "name": "section-2",
-                  "display-name": "Rest bind port",
-                  "row-index": "0",
-                  "column-index": "1",
+                  "display-name": "Engine Settings",
+                  "row-index": "1",
+                  "column-index": "0",
                   "row-span": "1",
-                  "column-span": "1",
-                  "section-columns": "1",
+                  "column-span": "2",
+                  "section-columns": "2",
                   "section-rows": "1",
                   "subsections": [
                     {
-                      "name": "subsection-2",
+                      "name": "subsection-2-1",
                       "row-index": "0",
                       "column-index": "0",
+                      "row-span": "1",
+                      "column-span": "1"
+                    },
+                    {
+                      "name": "subsection-2-2",
+                      "row-index": "0",
+                      "column-index": "1",
                       "row-span": "1",
                       "column-span": "1"
                     }
@@ -54,26 +75,7 @@
                 {
                   "name": "section-3",
                   "display-name": "Jetty send version enabled",
-                  "row-index": "0",
-                  "column-index": "2",
-                  "row-span": "1",
-                  "column-span": "1",
-                  "section-columns": "1",
-                  "section-rows": "1",
-                  "subsections": [
-                    {
-                      "name": "subsection-3",
-                      "row-index": "0",
-                      "column-index": "0",
-                      "row-span": "1",
-                      "column-span": "1"
-                    }
-                  ]
-                },
-                {
-                  "name": "section-4",
-                  "display-name": "Engine share level",
-                  "row-index": "1",
+                  "row-index": "2",
                   "column-index": "0",
                   "row-span": "1",
                   "column-span": "1",
@@ -81,26 +83,7 @@
                   "section-rows": "1",
                   "subsections": [
                     {
-                      "name": "subsection-4",
-                      "row-index": "0",
-                      "column-index": "0",
-                      "row-span": "1",
-                      "column-span": "1"
-                    }
-                  ]
-                },
-                {
-                  "name": "section-5",
-                  "display-name": "Engine type",
-                  "row-index": "1",
-                  "column-index": "1",
-                  "row-span": "1",
-                  "column-span": "1",
-                  "section-columns": "1",
-                  "section-rows": "1",
-                  "subsections": [
-                    {
-                      "name": "subsection-5",
+                      "name": "subsection-3",
                       "row-index": "0",
                       "column-index": "0",
                       "row-span": "1",
@@ -119,23 +102,27 @@
       "configs": [
         {
           "config": "kyuubi-defaults/kyuubi_frontend_thrift_binary_bind_port",
-          "subsection-name": "subsection-1"
+          "subsection-name": "subsection-1-1"
         },
         {
           "config": "kyuubi-defaults/kyuubi_frontend_rest_bind_port",
-          "subsection-name": "subsection-2"
+          "subsection-name": "subsection-1-2"
+        },
+        {
+          "config": "kyuubi-defaults/kyuubi_metrics_prometheus_port",
+          "subsection-name": "subsection-1-3"
+        },
+        {
+          "config": "kyuubi-defaults/kyuubi_engine_share_level",
+          "subsection-name": "subsection-2-1"
+        },
+        {
+          "config": "kyuubi-defaults/kyuubi_engine_type",
+          "subsection-name": "subsection-2-2"
         },
         {
           "config": "kyuubi-defaults/kyuubi_frontend_jetty_sendVersion_enabled",
           "subsection-name": "subsection-3"
-        },
-        {
-          "config": "kyuubi-defaults/kyuubi_engine_share_level",
-          "subsection-name": "subsection-4"
-        },
-        {
-          "config": "kyuubi-defaults/kyuubi_engine_type",
-          "subsection-name": "subsection-5"
         }
       ]
     },
@@ -148,6 +135,12 @@
       },
       {
         "config": "kyuubi-defaults/kyuubi_frontend_rest_bind_port",
+        "widget": {
+          "type": "text-field"
+        }
+      },
+      {
+        "config": "kyuubi-defaults/kyuubi_metrics_prometheus_port",
         "widget": {
           "type": "text-field"
         }

@@ -62,6 +62,12 @@
         <description>kyuubi frontend rest bind port</description>
     </property>
     <property>
+        <name>kyuubi_metrics_prometheus_port</name>
+        <value>10019</value>
+        <display-name>kyuubi.metrics.prometheus.port</display-name>
+        <description>Prometheus metrics HTTP server port</description>
+    </property>
+    <property>
         <name>kyuubi_frontend_jetty_sendVersion_enabled</name>
         <value>true</value>
         <display-name>kyuubi.frontend.jetty.sendVersion.enabled</display-name>
