@@ -67,8 +67,7 @@ class KyuubiServiceAdvisor(service_advisor.ServiceAdvisor):
         Modify the dictionary of cardinalities.
         Must be overriden in child class.
         """
-        # Nothing to do
-        pass
+        self.cardinalitiesDict["KYUUBI_SERVER"] = {"min": 1}
 
     def modifyHeapSizeProperties(self):
         """
@@ -153,10 +152,9 @@ class KyuubiRecommender(service_advisor.ServiceAdvisor):
         self.__recommendHdfsProxyUsers(configurations, services)
 
     def __recommendHdfsProxyUsers(self, configurations, services):
-        if not self.isSecurityEnabled(services):
-            if 'kyuubi-defaults' in services['configurations'] and 'kyuubi_user' in services['configurations']['kyuubi-defaults']['properties']:
-                kyuubi_user = services['configurations']['kyuubi-defaults']['properties']['kyuubi_user']
-                putCoreSiteProperty = self.putProperty(configurations, 'core-site', services)
-                putCoreSiteProperty('hadoop.proxyuser.{0}.groups'.format(kyuubi_user), '*')
-                putCoreSiteProperty('hadoop.proxyuser.{0}.hosts'.format(kyuubi_user), '*')
-                putCoreSiteProperty('hadoop.proxyuser.{0}.users'.format(kyuubi_user), '*')
+        if 'kyuubi-defaults' in services['configurations'] and 'kyuubi_user' in services['configurations']['kyuubi-defaults']['properties']:
+            kyuubi_user = services['configurations']['kyuubi-defaults']['properties']['kyuubi_user']
+            putCoreSiteProperty = self.putProperty(configurations, 'core-site', services)
+            putCoreSiteProperty('hadoop.proxyuser.{0}.groups'.format(kyuubi_user), '*')
+            putCoreSiteProperty('hadoop.proxyuser.{0}.hosts'.format(kyuubi_user), '*')
+            putCoreSiteProperty('hadoop.proxyuser.{0}.users'.format(kyuubi_user), '*')
