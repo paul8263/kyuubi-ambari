@@ -1,0 +1,176 @@
+{
+  "name": "default",
+  "description": "Default theme for Kyuubi service",
+  "configuration": {
+    "layouts": [
+      {
+        "name": "default",
+        "tabs": [
+          {
+            "name": "settings",
+            "display-name": "Settings",
+            "layout": {
+              "tab-columns": "3",
+              "tab-rows": "2",
+              "sections": [
+                {
+                  "name": "section-1",
+                  "display-name": "Thrift binary bind port",
+                  "row-index": "0",
+                  "column-index": "0",
+                  "row-span": "1",
+                  "column-span": "1",
+                  "section-columns": "1",
+                  "section-rows": "1",
+                  "subsections": [
+                    {
+                      "name": "subsection-1",
+                      "row-index": "0",
+                      "column-index": "0",
+                      "row-span": "1",
+                      "column-span": "1"
+                    }
+                  ]
+                },
+                {
+                  "name": "section-2",
+                  "display-name": "Rest bind port",
+                  "row-index": "0",
+                  "column-index": "1",
+                  "row-span": "1",
+                  "column-span": "1",
+                  "section-columns": "1",
+                  "section-rows": "1",
+                  "subsections": [
+                    {
+                      "name": "subsection-2",
+                      "row-index": "0",
+                      "column-index": "0",
+                      "row-span": "1",
+                      "column-span": "1"
+                    }
+                  ]
+                },
+                {
+                  "name": "section-3",
+                  "display-name": "Jetty send version enabled",
+                  "row-index": "0",
+                  "column-index": "2",
+                  "row-span": "1",
+                  "column-span": "1",
+                  "section-columns": "1",
+                  "section-rows": "1",
+                  "subsections": [
+                    {
+                      "name": "subsection-3",
+                      "row-index": "0",
+                      "column-index": "0",
+                      "row-span": "1",
+                      "column-span": "1"
+                    }
+                  ]
+                },
+                {
+                  "name": "section-4",
+                  "display-name": "Engine share level",
+                  "row-index": "1",
+                  "column-index": "0",
+                  "row-span": "1",
+                  "column-span": "1",
+                  "section-columns": "1",
+                  "section-rows": "1",
+                  "subsections": [
+                    {
+                      "name": "subsection-4",
+                      "row-index": "0",
+                      "column-index": "0",
+                      "row-span": "1",
+                      "column-span": "1"
+                    }
+                  ]
+                },
+                {
+                  "name": "section-5",
+                  "display-name": "Engine type",
+                  "row-index": "1",
+                  "column-index": "1",
+                  "row-span": "1",
+                  "column-span": "1",
+                  "section-columns": "1",
+                  "section-rows": "1",
+                  "subsections": [
+                    {
+                      "name": "subsection-5",
+                      "row-index": "0",
+                      "column-index": "0",
+                      "row-span": "1",
+                      "column-span": "1"
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "placement": {
+      "configuration-layout": "default",
+      "configs": [
+        {
+          "config": "kyuubi-defaults/kyuubi_frontend_thrift_binary_bind_port",
+          "subsection-name": "subsection-1"
+        },
+        {
+          "config": "kyuubi-defaults/kyuubi_frontend_rest_bind_port",
+          "subsection-name": "subsection-2"
+        },
+        {
+          "config": "kyuubi-defaults/kyuubi_frontend_jetty_sendVersion_enabled",
+          "subsection-name": "subsection-3"
+        },
+        {
+          "config": "kyuubi-defaults/kyuubi_engine_share_level",
+          "subsection-name": "subsection-4"
+        },
+        {
+          "config": "kyuubi-defaults/kyuubi_engine_type",
+          "subsection-name": "subsection-5"
+        }
+      ]
+    },
+    "widgets": [
+      {
+        "config": "kyuubi-defaults/kyuubi_frontend_thrift_binary_bind_port",
+        "widget": {
+          "type": "text-field"
+        }
+      },
+      {
+        "config": "kyuubi-defaults/kyuubi_frontend_rest_bind_port",
+        "widget": {
+          "type": "text-field"
+        }
+      },
+      {
+        "config": "kyuubi-defaults/kyuubi_frontend_jetty_sendVersion_enabled",
+        "widget": {
+          "type": "toggle"
+        }
+      },
+      {
+        "config": "kyuubi-defaults/kyuubi_engine_share_level",
+        "widget": {
+          "type": "combo"
+        }
+      },
+      {
+        "config": "kyuubi-defaults/kyuubi_engine_type",
+        "widget": {
+          "type": "combo"
+        }
+      }
+    ]
+  }
+}
+

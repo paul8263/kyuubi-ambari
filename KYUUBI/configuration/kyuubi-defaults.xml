@@ -66,6 +66,21 @@
         <value>true</value>
         <display-name>kyuubi.frontend.jetty.sendVersion.enabled</display-name>
         <description>Whether to send version info in response</description>
+        <value-attributes>
+            <type>value-list</type>
+            <overridable>false</overridable>
+            <entries>
+                <entry>
+                    <value>true</value>
+                    <label>true</label>
+                </entry>
+                <entry>
+                    <value>false</value>
+                    <label>false</label>
+                </entry>
+            </entries>
+            <selection-cardinality>1</selection-cardinality>
+        </value-attributes>
     </property>
 <!--  Kyuubi HA  -->
     <property>
@@ -142,6 +157,30 @@
         <value>USER</value>
         <display-name>kyuubi.engine.share.level</display-name>
         <description>Kyuubi engine share level</description>
+        <value-attributes>
+            <empty-value-valid>false</empty-value-valid>
+            <type>value-list</type>
+            <overridable>false</overridable>
+            <entries>
+                <entry>
+                    <value>USER</value>
+                    <label>USER</label>
+                </entry>
+                <entry>
+                    <value>CONNECTION</value>
+                    <label>CONNECTION</label>
+                </entry>
+                <entry>
+                    <value>GROUP</value>
+                    <label>GROUP</label>
+                </entry>
+                <entry>
+                    <value>SERVER</value>
+                    <label>SERVER</label>
+                </entry>
+            </entries>
+            <selection-cardinality>1</selection-cardinality>
+        </value-attributes>
     </property>
 
 <!--  Engine type  -->
@@ -150,6 +189,26 @@
         <value>SPARK_SQL</value>
         <display-name>kyuubi.engine.type</display-name>
         <description>Specify the detailed engine supported by Kyuubi.</description>
+        <value-attributes>
+            <empty-value-valid>false</empty-value-valid>
+            <type>value-list</type>
+            <overridable>false</overridable>
+            <entries>
+                <entry>
+                    <value>SPARK_SQL</value>
+                    <label>SPARK_SQL</label>
+                </entry>
+                <entry>
+                    <value>FLINK_SQL</value>
+                    <label>FLINK_SQL</label>
+                </entry>
+                <entry>
+                    <value>HIVE_SQL</value>
+                    <label>HIVE_SQL</label>
+                </entry>
+            </entries>
+            <selection-cardinality>1</selection-cardinality>
+        </value-attributes>
     </property>
 <!--  Spark master  -->
     <property>
