@@ -10,7 +10,7 @@
         "scope": "ANY",
         "source": {
           "type": "PORT",
-          "uri": "{{kyuubi-defaults/kyuubi_frontend_bind_port}}",
+          "uri": "{{kyuubi-defaults/kyuubi_frontend_rest_bind_port}}",
           "default_port": 10009,
           "reporting": {
             "ok": {
